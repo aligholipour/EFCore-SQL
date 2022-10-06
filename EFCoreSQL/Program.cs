@@ -1,6 +1,11 @@
-var builder = WebApplication.CreateBuilder(args);
+using EFCoreSQL.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
+var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+
+var configuration = builder.Configuration;
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
