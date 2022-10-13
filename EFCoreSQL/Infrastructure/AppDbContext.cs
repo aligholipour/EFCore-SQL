@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EFCoreSQL.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreSQL.Infrastructure
 {
@@ -7,5 +8,6 @@ namespace EFCoreSQL.Infrastructure
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
+        public DbSet<Customer> Customers { get; set; }
     }
 }
