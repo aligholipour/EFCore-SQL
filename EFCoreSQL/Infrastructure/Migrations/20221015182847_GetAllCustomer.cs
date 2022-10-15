@@ -8,9 +8,9 @@ namespace EFCoreSQL.Infrastructure.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql(@"CREATE VIEW GetAllCustomer as" +
-                                "SELECT Customers.Id, Customers.Name" +
-                                "FROM dbo.Customers;");
+            migrationBuilder.Sql(@"CREATE VIEW GetAllCustomer as
+                                SELECT Customers.Id, Customers.Name 
+                                FROM dbo.Customers;");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
