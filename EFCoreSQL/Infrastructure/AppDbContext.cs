@@ -10,6 +10,7 @@ namespace EFCoreSQL.Infrastructure
         {
         }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
         public DbSet<GetAllCustomer> GetAllCustomers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
