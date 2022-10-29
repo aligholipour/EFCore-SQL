@@ -8,13 +8,9 @@
 
   <ItemGroup>
     <Compile Remove="Domain\SQLModel\**" />
-    <Compile Remove="Shared\**" />
     <Content Remove="Domain\SQLModel\**" />
-    <Content Remove="Shared\**" />
     <EmbeddedResource Remove="Domain\SQLModel\**" />
-    <EmbeddedResource Remove="Shared\**" />
     <None Remove="Domain\SQLModel\**" />
-    <None Remove="Shared\**" />
   </ItemGroup>
 
   <ItemGroup>
