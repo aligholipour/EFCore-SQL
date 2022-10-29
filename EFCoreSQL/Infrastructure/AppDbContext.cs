@@ -22,5 +22,11 @@ namespace EFCoreSQL.Infrastructure
                 .ToView(nameof(GetAllCustomer))
                 .HasKey(c => c.Id);
         }
+
+        [DbFunction("NumberOFCustomerOrder", "dbo")]
+        public static int NumberOfCustomerOrder(int customerId)
+        {
+            return 0;
+        }
     }
 }
