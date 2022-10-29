@@ -39,7 +39,7 @@ namespace EFCoreSQL.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
 
                     b.HasData(
                         new
@@ -83,7 +83,7 @@ namespace EFCoreSQL.Infrastructure.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("EFCoreSQL.Domain.SQL.GetAllCustomer", b =>
