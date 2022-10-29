@@ -14,7 +14,11 @@ namespace EFCoreSQL.Controllers
         public IActionResult GetAllCustomer()
         {
             var customers = _context.GetAllCustomers.ToList();
+            return Ok(customers);
+        }
 
+        public IActionResult GetNumberOfCustomerOrder()
+        {
             var orderCount = _context.Customers
                 .Select(x => new
                 {
